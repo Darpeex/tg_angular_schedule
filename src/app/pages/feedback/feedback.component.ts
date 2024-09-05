@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-feedback',
   standalone: true,
   imports: [],
-  template: ``,
+  template: `feedback`,
 })
 export class FeedbackComponent {
 
