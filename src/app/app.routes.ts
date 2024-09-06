@@ -1,4 +1,5 @@
-import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { ShopComponent } from './pages/shop/shop.component';
 import { FeedbackComponent } from './pages/feedback/feedback.component';
 import { ProductComponent } from './pages/product/product.component';
@@ -19,3 +20,11 @@ export const routes: Routes = [
     component: ProductComponent,
   },
 ];
+
+// Добавил по совету gpt, чтобы измежать проблем с маршритизацией
+// На GitHub, иначе на некоторые файлы статус запроса - blocked:other
+@NgModule({
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  exports: [RouterModule],
+})
+export class AppRoutingModule {}
